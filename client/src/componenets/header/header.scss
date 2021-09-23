@@ -1,0 +1,44 @@
+.header {
+    margin-top: 60px;
+    &_Titles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Lora", serif;
+        color: #444;
+
+        &_Small {
+            position: absolute;
+            top: 18%;
+            font-size: 20px;
+        }
+        &_Large {
+            position: absolute;
+            top: 20%;
+            font-size: 100px;
+        }
+    }
+    &_Image {
+        width: 100%;
+        height: 450px;
+        margin-top: 80px;
+        object-fit: cover;
+    }
+}
+@media (max-width: 670px) {
+    .header {
+        margin: unset;
+
+        &_Titles {
+            &_Small {
+                top: 8%;
+            }
+            &_Large {
+                top: 10%;
+            }
+        }
+        &_Image {
+            margin: unset;
+        }
+    }
+}

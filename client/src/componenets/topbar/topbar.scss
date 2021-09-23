@@ -1,0 +1,181 @@
+.top {
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-family: "Josefin Sans", sans-serif;
+    z-index: 1;
+    &_Left {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left_Icons {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #444;
+            cursor: pointer;
+        }
+    }
+    &_Right {
+        flex: 3;
+        .userImage {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .right_Icons {
+            margin-left: 15px;
+            font-size: 18px;
+            color: #666;
+            cursor: pointer;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .topListHide {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            &_Item {
+                margin-right: 20px;
+                font-size: 18px;
+                font-weight: 300;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &_Center {
+        flex: 6;
+        .topList {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            .topListItem {
+                margin-right: 20px;
+                font-size: 18px;
+                font-weight: 300;
+                cursor: pointer;
+
+                .link {
+                    text-decoration: "none";
+                    color: "inherit";
+                }
+            }
+        }
+    }
+    &_toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 670px) {
+    .top {
+        position: sticky;
+        background-color: rgb(255, 255, 255);
+
+        &.open {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: black;
+            z-index: 998;
+
+            transition: 0.2s all ease-in-out;
+        }
+        &_Left {
+            display: none;
+
+            &.open {
+                display: flex;
+                .left_Icons {
+                    font-size: 26px;
+                }
+            }
+        }
+        &_Center {
+            display: none;
+            &.open {
+                display: flex;
+                flex-direction: column;
+                color: rgb(233, 233, 233);
+                .topList {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    .topListItem {
+                        margin-right: 20px;
+                        padding: 22px;
+                        font-size: 30px;
+                        font-weight: 500;
+                        align-items: center;
+                        cursor: pointer;
+
+                        .link {
+                            text-decoration: "none";
+                            color: "inherit";
+                        }
+                    }
+                }
+            }
+        }
+        &_Right {
+            display: none;
+            &.open {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .topListHide {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &_Item {
+                        color: #fff;
+                        font-size: 30px;
+                        font-weight: 600px;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+        &_toggle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            align-items: center;
+
+            &_title {
+                margin-left: 10px;
+            }
+            &_Icon {
+                margin-right: 10px;
+                font-size: 24px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

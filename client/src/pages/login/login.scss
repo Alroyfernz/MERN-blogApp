@@ -1,0 +1,62 @@
+.login {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url("https://images.pexels.com/photos/768474/pexels-photo-768474.jpeg?cs=srgb&dl=pexels-jess-bailey-designs-768474.jpg&fm=jpg");
+    background-size: cover;
+    align-items: center;
+
+    &_Title {
+        font-size: 50px;
+    }
+
+    &_Form {
+        margin-top: 20px;
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+
+        label {
+            margin: 10px 0px;
+        }
+
+        input {
+            padding: 10px;
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .login_Button {
+            padding: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+
+            color: white;
+            background-color: lightcoral;
+            border-radius: 8px;
+
+            &:disabled {
+                cursor: not-allowed;
+            }
+        }
+    }
+    &_register_Button {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: teal;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+    }
+}

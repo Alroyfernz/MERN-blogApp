@@ -1,0 +1,86 @@
+.write {
+    padding-top: 50px;
+    &_Image {
+        margin-left: 150px;
+        width: 70vw;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    &_Form {
+        position: relative;
+        &_Group {
+            margin-left: 150px;
+            display: flex;
+            display: flex;
+            align-items: center;
+
+            .write_Icon {
+                width: 20px;
+                height: 20px;
+                font-size: 20px;
+                color: gray;
+                border-radius: 50%;
+                border: 1px solid;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+            .write_Input {
+                font-size: 30px;
+                border: none;
+                padding: 20px;
+
+                width: 70vw;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+            .write_Text {
+                font-size: 20px;
+                height: 100vh;
+            }
+        }
+        .write_Submit {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            color: #fff;
+            background-color: teal;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 608px) {
+    .write {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_Image {
+            margin: unset;
+
+            width: 90%;
+        }
+        &_Form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &_Group {
+                margin: unset;
+            }
+        }
+        &_Submit {
+        }
+    }
+}
