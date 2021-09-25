@@ -28,7 +28,7 @@ const Login = () => {
       <span className="login_Title">Login</span>
       <form className="login_Form" onSubmit={handleSubmit}>
         <label>Username</label>
-        <input type="text" placeholder="Enter you email..." ref={userRef} />
+        <input type="text" placeholder="Enter your email..." ref={userRef} />
 
         <label>Password</label>
         <input
