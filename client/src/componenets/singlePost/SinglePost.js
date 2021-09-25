@@ -37,7 +37,11 @@ const SinglePost = () => {
     <div className="singlePost">
       <div className="singlePost_Wrapper">
         {post?.photo && (
-          <img src={PF + post?.photo} alt="" className="singlePost_Image" />
+          <img
+            src={PF + post?.photo}
+            alt="userimg"
+            className="singlePost_Image"
+          />
         )}
 
         <h1 className="singlePost_Title">
