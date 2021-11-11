@@ -9,7 +9,7 @@ const Setting = () => {
   const { user, dispatch } = useContext(Context);
   const handleDelete = async () => {
     try {
-      const res = await axios.delete("/user/" + user._id, {
+      const res = await axios.delete("/api/user/" + user._id, {
         userId: user._id,
       });
       if (res.status === 200) {
