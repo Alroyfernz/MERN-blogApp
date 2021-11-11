@@ -17,7 +17,7 @@ const SinglePost = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await axios.get("/posts/" + path);
+      const response = await axios.get("/api/posts/" + path);
       setPost(response.data);
       console.log(response.data);
     };
@@ -27,7 +27,7 @@ const SinglePost = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}` + path, {
+      await axios.delete(`/api/posts/${post._id}` + path, {
         data: { username: user?.username },
       });
       history.push("/");
